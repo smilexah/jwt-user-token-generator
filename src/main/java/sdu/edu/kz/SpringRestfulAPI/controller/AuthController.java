@@ -1,4 +1,4 @@
-package sdu.edu.kz.SpringRestfulAPI.controllers;
+package sdu.edu.kz.SpringRestfulAPI.controller;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,7 +26,7 @@ public class AuthController {
     @ResponseBody
     public Token token(@RequestBody UserLogin userLogin) throws AuthenticationException {
         Authentication authentication = authenticationManager.
-                authenticate(new UsernamePasswordAuthenticationToken(userLogin.username(), userLogin.password()));
+                authenticate(new UsernamePasswordAuthenticationToken(userLogin.email(), userLogin.password()));
 
         return new Token(tokenService.generateToken(authentication));
     }

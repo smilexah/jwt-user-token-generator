@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Configuration;
                         url = "https://www.apache.org/licenses/LICENSE-2.0"
                 ),
                 termsOfService = "https://sdu.edu.kz/language/en/terms-and-conditions/",
-                description = "Spring Boot RESTful API demo"
+                description = "Spring Boot RESTFul API demo"
         )
 )
 public class SwaggerConfig {
